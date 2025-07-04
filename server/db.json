@@ -1,0 +1,48 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Mamma Mia!",
+      "director": "Phyllida Lloyd",
+      "year": 2008,
+      "genre": "Musical/Comedia",
+      "rating": 8.2,
+      "poster": "https://via.placeholder.com/300x450/87CEEB/000000?text=Mamma+Mia",
+      "description": "Una película musical perfecta para el verano con canciones de ABBA en una isla griega.",
+      "summerVibes": true
+    },
+    {
+      "id": 2,
+      "title": "The Beach",
+      "director": "Danny Boyle",
+      "year": 2000,
+      "genre": "Drama/Aventura",
+      "rating": 7.8,
+      "poster": "https://via.placeholder.com/300x450/FFD700/000000?text=The+Beach",
+      "description": "Una aventura en las playas paradisíacas de Tailandia.",
+      "summerVibes": true
+    },
+    {
+      "id": 3,
+      "title": "Dirty Dancing",
+      "director": "Emile Ardolino",
+      "year": 1987,
+      "genre": "Romance/Drama",
+      "rating": 8.5,
+      "poster": "https://via.placeholder.com/300x450/FF6B6B/000000?text=Dirty+Dancing",
+      "description": "Romance y baile en un resort de verano en los años 60.",
+      "summerVibes": true
+    },
+    {
+      "id": 4,
+      "title": "Call Me by Your Name",
+      "director": "Luca Guadagnino",
+      "year": 2017,
+      "genre": "Romance/Drama",
+      "rating": 9.1,
+      "poster": "https://via.placeholder.com/300x450/98FB98/000000?text=Call+Me+by+Your+Name",
+      "description": "Una hermosa historia de amor ambientada en el verano italiano.",
+      "summerVibes": true
+    }
+  ]
+}

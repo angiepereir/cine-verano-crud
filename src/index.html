@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cine de Verano </h1>
+            <p class="header-subtitle">Descubre las mejores películas para disfrutar en estos días calurosos</p>
+        </header>
+
+        <div class="controls">
+            <h2>Gestión de Películas</h2>
+            
+            <!-- Filtros y búsqueda -->
+            <div class="search-filters">
+                <input type="text" id="searchInput" placeholder="Buscar por título...">
+                <select id="genreFilter">
+                    <option value="">Todos los géneros</option>
+                    <option value="musical">Musical</option>
+                    <option value="drama">Drama</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="romance">Romance</option>
+                    <option value="aventura">Aventura</option>
+                </select>
+                <button class="btn-secondary" onclick="filterSummerMovies()">🌞 Solo Verano</button>
+                <button class="btn-secondary" onclick="showAllMovies()">📽️ Todas</button>
+            </div>
+
+            <!-- Formulario para agregar/editar película -->
+            <form id="movieForm">
+                <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="director">Director:</label>
+                    <input type="text" id="director" name="director" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year">Año:</label>
+                    <input type="number" id="year" name="year" min="1900" max="2030" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genre">Género:</label>
+                    <input type="text" id="genre" name="genre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Calificación (1-10):</label>
+                    <input type="number" id="rating" name="rating" min="1" max="10" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="summerVibes">
+                        <input type="checkbox" id="summerVibes" name="summerVibes" style="width: auto; margin-right: 10px;">
+                        ¿Película de verano?
+                    </label>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">💾 Guardar Película</button>
+                    <button type="button" class="btn-secondary" onclick="clearForm()">🔄 Limpiar</button>
+                    <button type="button" class="btn-secondary" onclick="cancelEdit()">❌ Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Mensajes de estado -->
+        <div id="messages"></div>
+
+        <!-- Lista de películas -->
+        <div id="moviesContainer">
+            <div class="loading">Cargando películas... 🎬</div>
+        </div>
+    </div>
+    <script src="services.js"></script>
+</body>
+</html>
