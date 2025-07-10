@@ -18,13 +18,71 @@
       "title": "Forrest Gump",
       "image": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg",
       "description": "Un hombre con un bajo coeficiente intelectual narra su increíble vida.",
+      "rating": 4,
       "id": "ae49"
     },
     {
-      "id": "9c65",
       "title": "El viaje de Chihiro",
       "image": "https://merida.es/wp-content/uploads/2023/07/El_viaje_de_Chihiro-cartel.jpg",
-      "description": " Una niña entra en un mundo mágico de espíritus y debe encontrar la manera de salvar a sus padres y volver a casa.\n\n"
+      "description": "Una niña entra en un mundo mágico de espíritus y debe encontrar la manera de salvar a sus padres y volver a casa.",
+      "rating": 1,
+      "id": "9c65"
+    },
+    {
+      "title": "Inception",
+      "image": "https://m.media-amazon.com/images/I/912AErFSBHL._UF1000,1000_QL80_.jpg",
+      "description": "Un ladrón que roba secretos a través de los sueños debe implantar una idea en la mente de un CEO.",
+      "rating": 5,
+      "id": "m1"
+    },
+    {
+      "title": "Coco",
+      "image": "https://pics.filmaffinity.com/Coco-155051069-large.jpg",
+      "description": "Un joven músico es transportado a la Tierra de los Muertos para descubrir la historia de su familia.",
+      "rating": 4,
+      "id": "m2"
+    },
+    {
+      "title": "Parasite",
+      "image": "https://labutacaweb.com/wp-content/uploads/2020/01/img_20200124_1324027491169387776785095.jpg?w=492",
+      "description": "Una familia pobre se infiltra en la vida de una familia rica en Corea del Sur.",
+      "rating": 5,
+      "id": "m3"
+    },
+    {
+      "title": "Amélie",
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/5d8a39792d8c672ea2441f8016e3361fe4b422e98de655166ac2994eb2de29b5.jpg",
+      "description": "Una joven encuentra su vocación en ayudar a los demás en Montmartre.",
+      "rating": 4,
+      "id": "m4"
+    },
+    {
+      "title": "La La Land",
+      "image": "https://pics.filmaffinity.com/La_ciudad_de_las_estrellas_La_La_Land-133356261-large.jpg",
+      "description": "Un pianista de jazz y una actriz luchan por sus sueños en Los Ángeles.",
+      "rating": 3,
+      "id": "m5"
+    },
+    {
+      "title": "Intensamente",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/1_intensamente_2_payoff_banner_pre_1_aa3d9114.png",
+      "description": "Las emociones de una niña enfrentan cambios radicales al mudarse de ciudad.",
+      "rating": 5,
+      "id": "m6"
+    },
+    {
+      "title": "Gladiador",
+      "image": "https://biblioteca.acropolis.org/wp-content/uploads/2015/03/Gladiator.jpg",
+      "description": "Un general romano busca venganza tras la traición del emperador.",
+      "rating": 5,
+      "id": "m7"
+    },
+    {
+      "title": "Titanic",
+      "image": "https://m.media-amazon.com/images/I/811lT7khIrL._UF1000,1000_QL80_.jpg",
+      "description": "Una historia de amor en medio del desastre marítimo más famoso.",
+      "rating": 4,
+      "id": "m8"
     }
   ]
 }

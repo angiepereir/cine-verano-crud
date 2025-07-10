@@ -2,6 +2,11 @@ const API_URL = "http://localhost:3001/movies";
 let isEditing = false;
 let editingMovieId = null;
 
+let currentPage = 1;
+const moviesPerPage = 4;
+let allMovies = [];
+
+
 function showToast(message, type = "success") {
   const container = document.getElementById("toast-container");
   const toast = document.createElement("div");
@@ -28,7 +33,10 @@ async function createMovie(newMovie) {
     if (response.ok) {
       const createdMovie = await response.json();
       console.log("Película creada:", createdMovie);
-      printMovies();
+      allMovies = [];
+currentPage = 1;
+printMovies();
+
       showToast("🎉 Película agregada");
     } else {
       showToast("⚠️ Error al crear película", "error");
@@ -61,7 +69,10 @@ async function deleteMovie(id) {
 
     if (response.ok) {
       console.log(`Película con ID ${id} eliminada correctamente.`);
-      printMovies();
+      allMovies = [];
+currentPage = 1;
+printMovies();
+
       showToast("🗑️ Película eliminada");
     } else {
       showToast("⚠️ Error al eliminar", "error");
@@ -81,7 +92,10 @@ async function updateMovie(id, updatedMovie) {
 
     if (response.ok) {
       console.log("Película actualizada");
-      printMovies();
+      allMovies = [];
+currentPage = 1;
+printMovies();
+
       resetForm();
       showToast("✏️ Película actualizada");
     } else {
@@ -95,10 +109,17 @@ async function updateMovie(id, updatedMovie) {
 let moviesContainer = document.querySelector("section");
 
 async function printMovies() {
-  moviesContainer.innerHTML = "";
-  const movies = await getMovies();
+  if (allMovies.length === 0) {
+    allMovies = await getMovies();
+  }
 
-  movies.forEach(movie => {
+  const startIndex = (currentPage - 1) * moviesPerPage;
+  const endIndex = startIndex + moviesPerPage;
+  const moviesToShow = allMovies.slice(startIndex, endIndex);
+
+  moviesContainer.innerHTML = "";
+
+  moviesToShow.forEach(movie => {
     const safeImage = movie.image || 'https://via.placeholder.com/250x150?text=Sin+imagen';
     const stars = "⭐".repeat(movie.rating || 0) + "✩".repeat(5 - (movie.rating || 0));
 
@@ -119,7 +140,18 @@ async function printMovies() {
     `;
     moviesContainer.appendChild(div);
   });
+
+  updatePaginationControls();
 }
+
+function updatePaginationControls() {
+  const totalPages = Math.ceil(allMovies.length / moviesPerPage);
+  document.getElementById("page-indicator").textContent = `Página ${currentPage} de ${totalPages}`;
+  
+  document.getElementById("prev-page").disabled = currentPage === 1;
+  document.getElementById("next-page").disabled = currentPage === totalPages;
+}
+
 
 const form = document.getElementById("movie-form");
 
@@ -166,3 +198,18 @@ function editMovie(id, title, description, image, rating) {
   isEditing = true;
   editingMovieId = id;
 }
+document.getElementById("prev-page").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    printMovies();
+  }
+});
+
+document.getElementById("next-page").addEventListener("click", () => {
+  const totalPages = Math.ceil(allMovies.length / moviesPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    printMovies();
+  }
+});
+

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('/public/fondo.jpg'); /* ✅ Ruta corregida */
+  background-image: url('/public/fondo.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ form textarea {
   font-size: 1rem;
 }
 
-/* ✅ Botón principal (Agregar / Guardar) */
+/*Botón principal */
 form button {
   margin-top: 1rem;
   background-color: #2c3e50;
@@ -116,7 +116,7 @@ section p {
   color: #666;
 }
 
-/* ✅ Botones en tarjeta */
+/* Botones en tarjeta */
 section button {
   padding: 0.4rem 0.8rem;
   border: none;
@@ -163,12 +163,6 @@ section button:nth-of-type(2):hover {
   animation: fadeOut 3s forwards;
 }
 
-.toast.error {
-  background-color: #e74c3c;
-}
-.toast.warning {
-  background-color: #f39c12;
-}
 
 @keyframes fadeOut {
   0% {opacity: 1;}
