@@ -1,48 +1,28 @@
 {
   "movies": [
     {
-      "id": 1,
-      "title": "Mamma Mia!",
-      "director": "Phyllida Lloyd",
-      "year": 2008,
-      "genre": "Musical/Comedia",
-      "rating": 8.2,
-      "poster": "https://via.placeholder.com/300x450/87CEEB/000000?text=Mamma+Mia",
-      "description": "Una película musical perfecta para el verano con canciones de ABBA en una isla griega.",
-      "summerVibes": true
+      "title": "El Señor de los Anillos",
+      "image": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/89/67/45/20061512.jpg",
+      "description": "La épica aventura en la Tierra Media.",
+      "id": "4"
     },
     {
-      "id": 2,
-      "title": "The Beach",
-      "director": "Danny Boyle",
-      "year": 2000,
-      "genre": "Drama/Aventura",
-      "rating": 7.8,
-      "poster": "https://via.placeholder.com/300x450/FFD700/000000?text=The+Beach",
-      "description": "Una aventura en las playas paradisíacas de Tailandia.",
-      "summerVibes": true
+      "title": "Cien años de soledad",
+      "image": "https://i0.wp.com/ellaberintodelminotauro.com.co/wp-content/uploads/2025/01/poster-imagenes-cien-anos-soledad-4265860-scaled.webp?ssl=1",
+      "description": "La historia de la familia Buendía en Macondo.",
+      "id": "5"
     },
     {
-      "id": 3,
-      "title": "Dirty Dancing",
-      "director": "Emile Ardolino",
-      "year": 1987,
-      "genre": "Romance/Drama",
-      "rating": 8.5,
-      "poster": "https://via.placeholder.com/300x450/FF6B6B/000000?text=Dirty+Dancing",
-      "description": "Romance y baile en un resort de verano en los años 60.",
-      "summerVibes": true
+      "title": "Forrest Gump",
+      "image": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg",
+      "description": "Un hombre con un bajo coeficiente intelectual narra su increíble vida.",
+      "id": "ae49"
     },
     {
-      "id": 4,
-      "title": "Call Me by Your Name",
-      "director": "Luca Guadagnino",
-      "year": 2017,
-      "genre": "Romance/Drama",
-      "rating": 9.1,
-      "poster": "https://via.placeholder.com/300x450/98FB98/000000?text=Call+Me+by+Your+Name",
-      "description": "Una hermosa historia de amor ambientada en el verano italiano.",
-      "summerVibes": true
+      "id": "9c65",
+      "title": "El viaje de Chihiro",
+      "image": "https://merida.es/wp-content/uploads/2023/07/El_viaje_de_Chihiro-cartel.jpg",
+      "description": " Una niña entra en un mundo mágico de espíritus y debe encontrar la manera de salvar a sus padres y volver a casa.\n\n"
     }
   ]
 }
