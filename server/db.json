@@ -4,12 +4,14 @@
       "title": "El Señor de los Anillos",
       "image": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/89/67/45/20061512.jpg",
       "description": "La épica aventura en la Tierra Media.",
+      "rating": 4,
       "id": "4"
     },
     {
       "title": "Cien años de soledad",
       "image": "https://i0.wp.com/ellaberintodelminotauro.com.co/wp-content/uploads/2025/01/poster-imagenes-cien-anos-soledad-4265860-scaled.webp?ssl=1",
       "description": "La historia de la familia Buendía en Macondo.",
+      "rating": 2,
       "id": "5"
     },
     {

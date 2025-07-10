@@ -6,8 +6,13 @@
 }
 
 body {
+  background-image: url('/public/fondo.jpg'); /* ✅ Ruta corregida */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f4f7;
   padding: 2rem;
   text-align: center;
   color: #333;
@@ -20,7 +25,7 @@ h1 {
 
 /* Botón de carga */
 #load-btn {
-  background-color: #3498db;
+  background-color: #2c3e50;
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -30,7 +35,7 @@ h1 {
   cursor: pointer;
 }
 #load-btn:hover {
-  background-color: #2980b9;
+  background-color: #1a252f;
 }
 
 /* Formulario */
@@ -53,9 +58,10 @@ form textarea {
   font-size: 1rem;
 }
 
+/* ✅ Botón principal (Agregar / Guardar) */
 form button {
   margin-top: 1rem;
-  background-color: #2ecc71;
+  background-color: #2c3e50;
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -64,7 +70,7 @@ form button {
   cursor: pointer;
 }
 form button:hover {
-  background-color: #27ae60;
+  background-color: #1a252f;
 }
 
 /* Sección de películas */
@@ -110,27 +116,32 @@ section p {
   color: #666;
 }
 
-/* Botones en tarjeta */
+/* ✅ Botones en tarjeta */
 section button {
   padding: 0.4rem 0.8rem;
   border: none;
   border-radius: 6px;
   margin-right: 0.5rem;
   cursor: pointer;
+  font-size: 0.9rem;
 }
+
+/* Eliminar (rojo elegante) */
 section button:nth-of-type(1) {
-  background-color: #e74c3c;
+  background-color: #c0392b;
   color: white;
 }
 section button:nth-of-type(1):hover {
-  background-color: #c0392b;
+  background-color: #922b21;
 }
+
+/* Editar (azul profesional) */
 section button:nth-of-type(2) {
-  background-color: #f1c40f;
-  color: #2c3e50;
+  background-color: #5dade2;
+  color: white;
 }
 section button:nth-of-type(2):hover {
-  background-color: #d4ac0d;
+  background-color: #3498db;
 }
 
 /* Toasts */

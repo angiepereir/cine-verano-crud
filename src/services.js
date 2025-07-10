@@ -27,14 +27,14 @@ async function createMovie(newMovie) {
 
     if (response.ok) {
       const createdMovie = await response.json();
-      console.log("Pelicula creada:", createdMovie);
+      console.log("Película creada:", createdMovie);
       printMovies();
       showToast("🎉 Película agregada");
     } else {
       showToast("⚠️ Error al crear película", "error");
     }
   } catch (error) {
-    console.log("error de red:", error);
+    console.log("Error de red:", error);
   }
 }
 
@@ -47,7 +47,6 @@ async function getMovies() {
   });
 
   const movieData = await response.json();
-  console.log(movieData);
   return movieData;
 }
 
@@ -81,7 +80,7 @@ async function updateMovie(id, updatedMovie) {
     });
 
     if (response.ok) {
-      console.log("Pelicula actualizada");
+      console.log("Película actualizada");
       printMovies();
       resetForm();
       showToast("✏️ Película actualizada");
@@ -100,20 +99,23 @@ async function printMovies() {
   const movies = await getMovies();
 
   movies.forEach(movie => {
-    const safeImage = movie.image || 'https://via.placeholder.com/250x150?text=Sin+imagen'; // ✅ CAMBIO: imagen por defecto si falta
+    const safeImage = movie.image || 'https://via.placeholder.com/250x150?text=Sin+imagen';
+    const stars = "⭐".repeat(movie.rating || 0) + "✩".repeat(5 - (movie.rating || 0));
 
     const div = document.createElement("div");
     div.innerHTML = `
       <img src="${safeImage}" alt="${movie.title}" class="movie-image">
       <h2>${movie.title}</h2>
       <p>${movie.description}</p>
+      <p> ${stars}</p>
       <button onclick="deleteMovie('${movie.id}')">Eliminar</button>
       <button onclick="editMovie(
         '${movie.id}',
         '${movie.title.replace(/'/g, "\\'")}',
         '${movie.description.replace(/'/g, "\\'")}',
-        '${(movie.image || '').replace(/'/g, "\\'")}'
-      )">✏️ Editar</button> <!-- ✅ CAMBIO: ahora pasa también image -->
+        '${(movie.image || '').replace(/'/g, "\\'")}',
+        '${movie.rating || 0}'
+      )"> Editar</button>
     `;
     moviesContainer.appendChild(div);
   });
@@ -123,7 +125,7 @@ const form = document.getElementById("movie-form");
 
 document.getElementById("cancel-edit-btn").addEventListener("click", () => {
   resetForm();
-  document.getElementById("title").focus();// enfoca campo título
+  document.getElementById("title").focus();
 });
 
 form.addEventListener("submit", function (e) {
@@ -133,6 +135,7 @@ form.addEventListener("submit", function (e) {
     title: document.getElementById("title").value,
     image: document.getElementById("image").value,
     description: document.getElementById("description").value,
+    rating: parseInt(document.getElementById("rating").value) || 0
   };
 
   if (isEditing) {
@@ -152,10 +155,11 @@ function resetForm() {
   editingMovieId = null;
 }
 
-function editMovie(id, title, description, image) {
+function editMovie(id, title, description, image, rating) {
   document.getElementById("title").value = title;
   document.getElementById("description").value = description;
   document.getElementById("image").value = image;
+  document.getElementById("rating").value = rating;
   document.querySelector("#movie-form button").textContent = "Guardar cambios";
   document.getElementById("cancel-edit-btn").style.display = "inline-block";
 
