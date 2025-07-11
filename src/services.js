@@ -34,8 +34,8 @@ async function createMovie(newMovie) {
       const createdMovie = await response.json();
       console.log("Película creada:", createdMovie);
       allMovies = [];
-currentPage = 1;
-printMovies();
+      currentPage = 1;
+      printMovies();
 
       showToast("🎉 Película agregada");
     } else {
@@ -70,8 +70,8 @@ async function deleteMovie(id) {
     if (response.ok) {
       console.log(`Película con ID ${id} eliminada correctamente.`);
       allMovies = [];
-currentPage = 1;
-printMovies();
+      currentPage = 1;
+      printMovies();
 
       showToast("🗑️ Película eliminada");
     } else {
@@ -93,8 +93,8 @@ async function updateMovie(id, updatedMovie) {
     if (response.ok) {
       console.log("Película actualizada");
       allMovies = [];
-currentPage = 1;
-printMovies();
+      currentPage = 1;
+      printMovies();
 
       resetForm();
       showToast("✏️ Película actualizada");
